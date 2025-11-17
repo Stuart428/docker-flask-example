@@ -107,6 +107,7 @@ RUN if [ "${FLASK_DEBUG}" != "true" ]; then \
 
 ENTRYPOINT ["/app/bin/docker-entrypoint-web"]
 
-EXPOSE 8000
+EXPOSE 8080
 
-CMD ["gunicorn", "-c", "python:config.gunicorn", "hello.app:create_app()"]
+CMD ["gunicorn", "-c", "python:config.gunicorn", "--bind", "0.0.0.0:8080", "hello.app:create_app()"]
+
