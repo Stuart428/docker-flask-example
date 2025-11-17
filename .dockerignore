@@ -4,7 +4,7 @@
 __pycache__/
 assets/node_modules/
 public/
-
+cheese
 .coverage
 .dockerignore
 .env*
